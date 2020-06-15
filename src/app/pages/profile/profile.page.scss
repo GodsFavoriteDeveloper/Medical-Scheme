@@ -2,3 +2,43 @@ ion-content {
     --background: transparent;
     background: #eeeeee;
 }
+
+h2 {
+    font-size: 25px;
+    font-weight: 500 !important;
+}
+h3 {
+    font-weight: 500 !important;
+}
+
+ion-thumbnail {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+ion-item {
+    --background: transparent;
+}
+hr {
+    border-top: 2px solid #cac9c9;
+}
+.dependant {
+    display: inline-block;
+    img {
+        width: 43px;
+        border-radius: 50%;
+        border: 3px solid #eeeeee;
+    }
+}
+.dependant:nth-child(2), .dependant:nth-child(3), .dependant:nth-child(4), .dependant:nth-child(5), .dependant:nth-child(6) {
+    margin-left: -14px;
+}
+
+.profile-body {
+    height: 70vh;
+    background: #fff;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    margin-top: 10px;
+}
