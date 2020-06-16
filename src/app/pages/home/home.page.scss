@@ -72,11 +72,17 @@ ion-content {
 // Activity section
 .activity {
     margin: 0 15px;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.27) 3px 4px 6px;
-    ion-avatar {
-        border: 3px solid #2a304b;
+    .activity-list-wrapper {
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.27) 3px 4px 6px;
+    }
+    h2.activity-title {
+        margin-bottom: 13px;
+    }
+    ion-thumbnail {
+        border-radius: 5px;
+        overflow: hidden;
     }
     .activity-text {
         color: #ffffff;

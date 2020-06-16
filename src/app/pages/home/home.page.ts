@@ -7,6 +7,7 @@ import { faCamera, faBaby, faFileContract, faCoins, faEye, faHandHoldingUsd, faS
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+  news = false;
   icons = {
     faCamera,
     faBaby,
@@ -19,7 +20,11 @@ export class HomePage implements OnInit {
     faUserTie,
     faPaperPlane
   };
-  constructor() { }
+  constructor() {
+    setTimeout(() => {
+      this.news = true
+    }, 5000)
+  }
 
   ngOnInit() {
   }
