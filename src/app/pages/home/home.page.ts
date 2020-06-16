@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faCamera, faBaby, faFileContract, faCoins, faEye, faHandHoldingUsd, faSearchLocation, faHeartbeat, faUserTie, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faCamera, faBaby, faHandshake, faFileContract, faCoins, faEye, faHandHoldingUsd, faSearchLocation, faHeartbeat, faUserTie, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +14,7 @@ export class HomePage implements OnInit {
     faFileContract,
     faCoins,
     faEye,
+    faHandshake,
     faHandHoldingUsd,
     faSearchLocation,
     faHeartbeat,
@@ -22,8 +23,8 @@ export class HomePage implements OnInit {
   };
   constructor() {
     setTimeout(() => {
-      this.news = true
-    }, 5000)
+      this.news = true;
+    }, 5000);
   }
 
   ngOnInit() {

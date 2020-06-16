@@ -2,6 +2,12 @@ ion-content {
     --background: transparent;
     background: #eeeeee;
 }
+ion-avatar {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    border: 4px solid #363c55;
+}
 .header-area {
     height: 200px;
     background: var(--ion-color-primary);

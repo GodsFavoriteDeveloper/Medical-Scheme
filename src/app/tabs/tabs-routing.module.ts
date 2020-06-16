@@ -24,6 +24,10 @@ const routes: Routes = [
         loadChildren: () => import('../pages/card/card.module').then(m => m.CardPageModule)
       },
       {
+        path: 'rewards',
+        loadChildren: () => import('../pages/rewards/rewards.module').then(m => m.RewardsPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/home',
         pathMatch: 'full'
