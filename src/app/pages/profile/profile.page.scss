@@ -19,7 +19,7 @@ ion-item {
 }
 
 .profile-wrapper {
-    background: var(--ion-color-primary);
+    background: var(--ion-color-dark);
 
     img {
         width: 120px;
@@ -60,9 +60,8 @@ ion-item {
 }
 
 .profile-body {
-    height: 70vh;
     background: #fff;
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
-    margin-top: 10px;
+    margin-top: 0px;
 }

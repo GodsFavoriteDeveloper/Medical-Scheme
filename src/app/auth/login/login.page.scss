@@ -1,0 +1,38 @@
+.login-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.top {
+    flex: 2;
+    background: url('../../../assets/img/gemsbg1.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    padding: 10px;
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+.bottom {
+    flex: 2;
+    // background: url('../../../assets/img/footerbg.jpg');
+    background: #eee;
+    background-position: bottom;
+    background-size: cover;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ion-item {
+    margin-bottom: 5px;
+}

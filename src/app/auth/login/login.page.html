@@ -1,9 +1,34 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>login</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
+  <div class="login-wrapper">
+    <div class="top">
+      <div class="logo">
+        <img src="assets/img/gemslogo.png" alt="">
+      </div>
+    </div>
+    <div class="gems-border"></div>
 
+    <div class="bottom">
+      <ion-item>
+        <ion-input name="email" ngModel placeholder="Enter Email Address" type="email" #emailInput="ngModel" required
+          email></ion-input>
+        <ion-button slot="start" fill="clear">
+          <ion-icon name="send"></ion-icon>
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-input name="password" ngModel placeholder="Enter Password" type="password" #passwordInput="ngModel"
+          required></ion-input>
+        <ion-button fill="clear" slot="start">
+          <ion-icon name="key"></ion-icon>
+        </ion-button>
+      </ion-item>
+      <ion-button color="dark" expand="block">Sign In</ion-button>
+    </div>
+  </div>
 </ion-content>

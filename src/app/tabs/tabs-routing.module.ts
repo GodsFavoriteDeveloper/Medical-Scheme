@@ -28,15 +28,19 @@ const routes: Routes = [
         loadChildren: () => import('../pages/rewards/rewards.module').then(m => m.RewardsPageModule)
       },
       {
+        path: 'claims',
+        loadChildren: () => import('../pages/claims/claims.module').then(m => m.ClaimsPageModule)
+      },
+      {
         path: '',
-        redirectTo: '/tabs/home',
+        redirectTo: '/tabs/tabs/home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/home',
+    redirectTo: '/tabs/tabs/home',
     pathMatch: 'full'
   }
 ];

@@ -4,6 +4,10 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+    loadChildren: () => import('./auth/onboard/onboard.module').then( m => m.OnboardPageModule)
+  },
+  {
+    path: 'tabs',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
@@ -41,6 +45,18 @@ const routes: Routes = [
   {
     path: 'rewards',
     loadChildren: () => import('./pages/rewards/rewards.module').then( m => m.RewardsPageModule)
+  },
+  {
+    path: 'walkthrough',
+    loadChildren: () => import('./auth/walkthrough/walkthrough.module').then( m => m.WalkthroughPageModule)
+  },
+  {
+    path: 'fingerprint',
+    loadChildren: () => import('./auth/fingerprint/fingerprint.module').then( m => m.FingerprintPageModule)
+  },
+  {
+    path: 'onboard',
+    loadChildren: () => import('./auth/onboard/onboard.module').then( m => m.OnboardPageModule)
   }
 ];
 @NgModule({

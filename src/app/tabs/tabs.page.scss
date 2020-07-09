@@ -3,7 +3,7 @@ ion-tabs{
 	ion-fab {
 		margin-bottom: env(safe-area-inset-bottom); /* fix notch ios*/
 		ion-fab-button {
-			--box-shadow: none;
+			--box-shadow: 1px 1px 19px 5px #888888;
 		}
 	}
 	ion-tab-bar {
