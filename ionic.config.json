@@ -1,7 +1,8 @@
 {
   "name": "GEMS",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

@@ -4,6 +4,10 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+    loadChildren: () => import('./auth/walkthrough/walkthrough.module').then( m => m.WalkthroughPageModule)
+  },
+  {
+    path: 'onboard',
     loadChildren: () => import('./auth/onboard/onboard.module').then( m => m.OnboardPageModule)
   },
   {
@@ -57,6 +61,14 @@ const routes: Routes = [
   {
     path: 'onboard',
     loadChildren: () => import('./auth/onboard/onboard.module').then( m => m.OnboardPageModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./pages/contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
+    path: 'bot',
+    loadChildren: () => import('./pages/bot/bot.module').then( m => m.BotPageModule)
   }
 ];
 @NgModule({

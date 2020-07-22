@@ -30,4 +30,8 @@ export class HomePage implements OnInit {
   ngOnInit() {
   }
 
+  takeAssessment() {
+    window.open('https://covid19.gems.gov.za', '_blank');
+  }
+
 }

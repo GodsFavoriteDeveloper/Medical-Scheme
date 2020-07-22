@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-walkthrough',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./walkthrough.page.scss'],
 })
 export class WalkthroughPage implements OnInit {
+  @ViewChild('slides', {static: false}) slides: IonSlides;
+  slideOpts = {
+    // pager: true
+  };
+
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  goToSlide(a?: number) {
+    this.slides.slideTo(2);
   }
 
 }

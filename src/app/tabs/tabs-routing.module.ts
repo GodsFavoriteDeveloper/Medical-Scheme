@@ -24,12 +24,20 @@ const routes: Routes = [
         loadChildren: () => import('../pages/card/card.module').then(m => m.CardPageModule)
       },
       {
+        path: 'contact',
+        loadChildren: () => import('../pages/contact/contact.module').then(m => m.ContactPageModule)
+      },
+      {
         path: 'rewards',
         loadChildren: () => import('../pages/rewards/rewards.module').then(m => m.RewardsPageModule)
       },
       {
         path: 'claims',
         loadChildren: () => import('../pages/claims/claims.module').then(m => m.ClaimsPageModule)
+      },
+      {
+        path: 'benefits',
+        loadChildren: () => import('../pages/benefits/benefits.module').then(m => m.BenefitsPageModule)
       },
       {
         path: '',

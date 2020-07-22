@@ -2,13 +2,17 @@
 ion-tabs{
 	ion-fab {
 		margin-bottom: env(safe-area-inset-bottom); /* fix notch ios*/
+		// animation: 6s bounce infinite;
 		ion-fab-button {
-			--box-shadow: 1px 1px 19px 5px #888888;
+			// --box-shadow: 1px 1px 19px 5px #888888;
+			--background: var(--ion-color-danger);
 		}
 	}
 	ion-tab-bar {
 		--border: 0;
 		--background: transparent;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
 		position: absolute;
 		bottom: 0;
 		left:0; right: 0;

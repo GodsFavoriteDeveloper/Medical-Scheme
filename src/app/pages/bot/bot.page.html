@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar mode="ios" color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tabs/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Virtual Assistant
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="message-wrapper">
+        <div>
+          <img class="profile-pic left" src="assets/img/logo.png" />
+          <!--  wave-->
+          <div class="chat-bubble left slide-left">
+    
+            <div class="message" autolinker>Hello Norman!!!</div>
+    
+            <!--
+              <div class="message-detail">
+              <span class="bold">Vote Africa Agent</span>
+            </div>
+            -->
+    
+          </div>
+        </div>
+        <div>
+          <img class="profile-pic right" src="https://www.freeweekly.com/wp-content/uploads/2015/11/Joe-DanielsCOVER.jpg" />
+          <!--  wave-->
+          <div class="chat-bubble right slide-right">
+    
+            <div class="message-right" autolinker>Hi, can I have a list my latest claims?</div>
+    
+            <!--
+              <div class="message-detail">
+              <span class="bold">Norman Dube</span>
+            </div>
+            -->
+    
+          </div>
+        </div>
+    </div>
+
+    <div *ngIf="isLoading" class="typing-indicator">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div style="height: 90px"></div>
+
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-item>
+      <ion-input #input type="text" placeholder="Your message here.." (keyup.enter)="ngOnInit()"></ion-input>
+
+      <ion-button icon-only item-right clear>
+        <ion-icon name="send"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>
