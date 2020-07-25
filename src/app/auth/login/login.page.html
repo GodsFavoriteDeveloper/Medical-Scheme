@@ -14,21 +14,33 @@
     <div class="gems-border"></div>
 
     <div class="bottom">
-      <ion-item>
-        <ion-input name="email" ngModel placeholder="Enter Email Address" type="email" #emailInput="ngModel" required
-          email></ion-input>
-        <ion-button slot="start" fill="clear">
-          <ion-icon name="send"></ion-icon>
-        </ion-button>
-      </ion-item>
-      <ion-item>
-        <ion-input name="password" ngModel placeholder="Enter Password" type="password" #passwordInput="ngModel"
-          required></ion-input>
-        <ion-button fill="clear" slot="start">
-          <ion-icon name="key"></ion-icon>
-        </ion-button>
-      </ion-item>
-      <ion-button color="dark" expand="block" routerLink="/tabs/tabs/home">Sign In</ion-button>
+      <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+        <ion-item>
+          <ion-input name="username" ngModel placeholder="Enter Username" type="text" #usernameInput="ngModel"
+                     required username></ion-input>
+          <ion-button slot="start" fill="clear">
+            <ion-icon name="send"></ion-icon>
+          </ion-button>
+        </ion-item>
+
+        <span class="error-msg" style="color: red" *ngIf="usernameInput.invalid && usernameInput.touched">Please enter a valid username</span>
+        <div style="height: 5px"></div>
+
+        <ion-item>
+          <ion-input name="password" ngModel placeholder="Enter Password" type="password" #passwordInput="ngModel"
+                     required></ion-input>
+          <ion-button fill="clear" slot="start">
+            <ion-icon name="key"></ion-icon>
+          </ion-button>
+        </ion-item>
+
+
+        <span class="error-msg" style="color: red" *ngIf="passwordInput.invalid && passwordInput.touched">Please
+          enter a valid password</span>
+
+        <ion-button shape="round" type="submit" color="primary" expand="full">Sign In</ion-button>
+      </form>
+
     </div>
   </div>
 </ion-content>

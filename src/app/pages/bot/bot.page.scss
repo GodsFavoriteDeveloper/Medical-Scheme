@@ -112,6 +112,7 @@ img.profile-pic {
 img.profile-pic.left {
   left: 10px;
   float: left;
+  background: #fff;
 }
 
 img.profile-pic.right {
@@ -150,6 +151,7 @@ img.profile-pic.right {
 
 .message-wrapper {
   position: relative;
+  clear: both;
 }
 
 .message-wrapper:last-child {

@@ -8,6 +8,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ChartsModule } from 'ng2-charts';
+import { FormsModule } from '@angular/forms';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,11 +26,13 @@ library.add(faBaby, faCamera);
   entryComponents: [],
   imports: [BrowserModule,
     IonicModule.forRoot(),
+    IonicStorageModule.forRoot(),
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ChartsModule
+    ChartsModule,
+    FormsModule
   ],
   providers: [
     StatusBar,

@@ -16,7 +16,7 @@
     <ion-grid class="ion-no-padding">
       <ion-row>
         <ion-col col-6 class="ion-no-padding name-section">
-          <h1 class="heading">Hello, <br>Norman</h1>
+          <h1 class="heading">Hello, <br>{{member.UserName}}</h1>
         </ion-col>
         <ion-col col-6 class="ion-no-padding ion-text-end">
           <div class="logo"></div>
@@ -84,7 +84,7 @@
 
   </div>
 
-  <div class="activity" *ngIf="news">
+  <div class="activity">
     <ion-grid class="ion-no-padding">
       <ion-row>
         <ion-col col-12 class="ion-no-padding">
@@ -97,22 +97,22 @@
         <ion-col class="ion-no-padding">
           <div class="activity-list-wrapper">
             <ion-item button detail>
-              <div class="date-wrap" slot="start">
+              <!-- <div class="date-wrap" slot="start">
                 <span class="month">Jan</span>
                 <span class="day">19</span>
-              </div>
+              </div> -->
               <ion-label>
                 <h2>Change Requested</h2>
               </ion-label>
             </ion-item>
             <ion-item button detail>
-              <ion-icon name="person" slot="start"></ion-icon>
+              <!-- <ion-icon name="person" slot="start"></ion-icon> -->
               <ion-label>
                 <h2>Change Requested</h2>
               </ion-label>
             </ion-item>
             <ion-item button detail>
-              <ion-icon name="person" slot="start"></ion-icon>
+              <!-- <ion-icon name="person" slot="start"></ion-icon> -->
               <ion-label>
                 <h2>Change Requested</h2>
               </ion-label>
@@ -124,7 +124,7 @@
   </div>
 
 
-  <div class="activity" *ngIf="!news">
+  <!-- <div class="activity" *ngIf="!news">
     <ion-grid class="ion-no-padding">
       <ion-row>
         <ion-col col-12 class="ion-no-padding">
@@ -181,7 +181,7 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-  </div>
+  </div> -->
 
   <div style="height: 80px"></div>
 

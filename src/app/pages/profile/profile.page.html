@@ -3,11 +3,12 @@
     <div class="topitem">
       <ion-item lines="full">
         <ion-thumbnail slot="start">
-          <img src="https://www.freeweekly.com/wp-content/uploads/2015/11/Joe-DanielsCOVER.jpg" alt="">
+          <img [src]="MemberImage" alt="">
         </ion-thumbnail>
         <ion-label>
-          <h2>Norman Dube</h2>
-          <p>Emerald</p>
+          <h2>{{profile?.FullName}}</h2>
+          <p>{{profile?.MemberNo}}</p>
+          <p>{{profile?.Plan.BenefitPlanName}}</p>
           <!-- <p class="switch">Switch Account</p> -->
         </ion-label>
         <ion-icon routerLink="/onboard" slot="end" color="warning" name="log-out-outline"></ion-icon>
@@ -37,19 +38,19 @@
       <ion-col>
         <div class="detail">
           <h2 class="title">Date of Birth</h2>
-          <p>14 Sep 1986</p>
+          <p>{{profile?.DOB | date: 'mediumDate'}}</p>
         </div>
       </ion-col>
       <ion-col>
         <div class="detail">
           <h2 class="title">Marital Status</h2>
-          <p>Married</p>
+          <p>{{profile?.MemberMaritalStatus.Description}}</p>
         </div>
       </ion-col>
       <ion-col>
         <div class="detail">
           <h2 class="title">ID Number</h2>
-          <p>53636353</p>
+          <p>{{profile?.MemberIDNo}}</p>
         </div>
       </ion-col>
     </ion-row>
@@ -58,20 +59,20 @@
     <ion-row>
       <ion-col>
         <ion-slides [options]="slideOpt">
-          <ion-slide class="darkslide">
-            <!-- <ion-icon name="home"></ion-icon> -->
-            <p>USED</p>
-            <h2>R978</h2>
-          </ion-slide>
           <ion-slide>
             <!-- <ion-icon name="home"></ion-icon> -->
             <p>ALLOCATED</p>
-            <h2>R1,365</h2>
+            <h2 *ngIf="dayToDayBenefits">R{{dayToDayBenefits[0].MaxAmount.Amount}}</h2>
           </ion-slide>
           <ion-slide>
             <!-- <ion-icon name="home"></ion-icon> -->
             <p>USED</p>
-            <h2>R2,875</h2>
+            <h2 *ngIf="dayToDayBenefits">R{{dayToDayBenefits[0].FreeAmount.Amount}}</h2>
+          </ion-slide>
+          <ion-slide class="darkslide">
+            <!-- <ion-icon name="home"></ion-icon> -->
+            <p>USED</p>
+            <h2 *ngIf="dayToDayBenefits">R{{dayToDayBenefits[0].UsedAmount.Amount}}</h2>
           </ion-slide>
           <ion-slide>
             <!-- <ion-icon name="home"></ion-icon> -->
@@ -86,17 +87,8 @@
         <div class="dep-wrapper">
           <span class="dep-title">Dependants</span>
           <div class="dependants">
-            <div class="dependant">
-              <img src="https://www.freeweekly.com/wp-content/uploads/2015/11/Joe-DanielsCOVER.jpg" alt="">
-            </div>
-            <div class="dependant">
-              <img src="https://www.freeweekly.com/wp-content/uploads/2015/11/Joe-DanielsCOVER.jpg" alt="">
-            </div>
-            <div class="dependant">
-              <img src="https://www.freeweekly.com/wp-content/uploads/2015/11/Joe-DanielsCOVER.jpg" alt="">
-            </div>
-            <div class="dependant">
-              <img src="https://www.freeweekly.com/wp-content/uploads/2015/11/Joe-DanielsCOVER.jpg" alt="">
+            <div class="dependant" *ngFor="let dependant of profile?.Dependants">
+              <img src="https://api.gems.gov.za/api/v1/MemberImage/{{dependant.BeneficiaryID}}?counter=0" alt="">
             </div>
           </div>
         </div>
@@ -108,28 +100,10 @@
   <ion-grid class="ion-no-padding activity" *ngIf="user === 'activity'">
     <ion-row>
       <ion-col class="ion-no-padding">
-          <ion-item lines="none" detail button>
+          <ion-item *ngFor="let item of activity" lines="none" detail button>
             <ion-label>
-              <h2>Change Requested</h2>
-              <p>22 Nov 2019</p>
-            </ion-label>
-          </ion-item>
-          <ion-item lines="none" detail button>
-            <ion-label>
-              <h2>Change Requested</h2>
-              <p>22 Nov 2019</p>
-            </ion-label>
-          </ion-item>
-          <ion-item lines="none" detail button>
-            <ion-label>
-              <h2>Change Requested</h2>
-              <p>22 Nov 2019</p>
-            </ion-label>
-          </ion-item>
-          <ion-item lines="none" detail button>
-            <ion-label>
-              <h2>Change Requested</h2>
-              <p>22 Nov 2019</p>
+              <h2>{{item.Header}}</h2>
+              <p>{{item.DOA | date: 'mediumDate'}}</p>
             </ion-label>
           </ion-item>
       </ion-col>

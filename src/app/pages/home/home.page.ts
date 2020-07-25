@@ -1,3 +1,5 @@
+import { Member } from './../../models/member.model';
+import { AuthenticationService } from './../../services/authentication.service';
 import { Component, OnInit } from '@angular/core';
 import { faCamera, faBaby, faHandshake, faFileContract, faCoins, faEye, faHandHoldingUsd, faSearchLocation, faHeartbeat, faUserTie, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
@@ -7,7 +9,7 @@ import { faCamera, faBaby, faHandshake, faFileContract, faCoins, faEye, faHandHo
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-  news = false;
+  member: Member;
   icons = {
     faCamera,
     faBaby,
@@ -21,10 +23,8 @@ export class HomePage implements OnInit {
     faUserTie,
     faPaperPlane
   };
-  constructor() {
-    setTimeout(() => {
-      this.news = true;
-    }, 5000);
+  constructor(private auth: AuthenticationService) {
+    this.member = this.auth.selectedMember;
   }
 
   ngOnInit() {
