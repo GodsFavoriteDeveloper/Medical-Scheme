@@ -132,4 +132,17 @@ export class AuthenticationService {
     );
   }
 
+
+  getBenefits() {
+    let req = this.httpNative.get(`${this.url}/api/v1/Members/${this.selectedMember.MemberGuid}/benefitUsage/`,
+    {},
+    {
+      'Authorization': `Bearer ${this.selectedMember.access_token}`
+    }
+    );
+    return from(req).pipe(
+      timeout(10000)
+    );
+  }
+
 }

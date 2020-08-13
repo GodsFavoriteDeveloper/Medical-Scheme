@@ -11,12 +11,16 @@ ion-tabs{
 	ion-tab-bar {
 		--border: 0;
 		--background: transparent;
-		border-top-left-radius: 20px;
-		border-top-right-radius: 20px;
+		// border-top-left-radius: 20px;
+		// border-top-right-radius: 20px;
 		position: absolute;
-		bottom: 0;
-		left:0; right: 0;
-		width: 100%;
+		bottom: 5px;
+		left: 5px;
+		right: 5px;
+		width: calc(100% - 10px);
+		box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
 		&:after{
 			content: " ";
 			width: 100%;

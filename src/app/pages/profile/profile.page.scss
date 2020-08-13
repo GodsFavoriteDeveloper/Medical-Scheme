@@ -14,14 +14,14 @@ ion-segment-button {
         padding: 3px;
     }
     ion-thumbnail {
-        border-radius: 10px;
+        border-radius: 50%;
         overflow: hidden;
-        height: 60px;
-        width: 60px;
+        height: 50px;
+        width: 50px;
         border: 2px solid var(--ion-color-light);
         padding: 2px;
         img {
-            border-radius: 10px;            
+            border-radius: 50%;            
         }
     }
     h2 {
@@ -127,8 +127,8 @@ ion-segment-button {
 
 .details {
     background: var(--ion-color-primary);
-    padding: 42px 25px 65px;
-    border-bottom-left-radius: 100px;
+    padding: 37px 25px 60px;
+    border-bottom-left-radius: 0px;
     .detail {
         text-align: center;
         border-right: 1px solid #eeeeee;

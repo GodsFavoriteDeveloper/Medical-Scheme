@@ -1,13 +1,13 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-back-button defaultHref="/tabs/tabs/home"></ion-back-button>
     </ion-buttons>
     <ion-segment [(ngModel)]="claimState" (ionChange)="segmentChanged($event)">
-      <ion-segment-button value="member">
+      <ion-segment-button value="benefits">
         <ion-label>History</ion-label>
       </ion-segment-button>
-      <ion-segment-button value="activity">
+      <ion-segment-button value="statements">
         <ion-label>Statements</ion-label>
       </ion-segment-button>
     </ion-segment>
@@ -15,7 +15,7 @@
 </ion-header>
 
 <ion-content>
-  <div *ngIf="claimState === benefits" class="benefits">
+  <div *ngIf="claimState === 'benefits'" class="benefits">
     <ion-item *ngFor="let claim of claims" lines="inset">
       <ion-icon slot="start" name="download" class="status-icon"></ion-icon>
       <ion-label>

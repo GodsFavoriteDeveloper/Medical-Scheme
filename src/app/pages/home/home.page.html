@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="dark">
+  <!-- <ion-toolbar color="dark">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -7,9 +7,28 @@
     <ion-avatar *ngIf="member" slot="end">
       <img src="https://api.gems.gov.za/api/v1/MemberImage/{{member?.MemberGuid}}?counter=0" alt="">
     </ion-avatar>
+  </ion-toolbar> -->
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-searchbar placeholder="Hey {{member?.UserName}}, any questions?"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
-<div class="gems-border"></div>
+<div class="gems-border">
+  <div class="rainbow">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
 
 <ion-content>
   <div class="header-area">
@@ -65,8 +84,8 @@
         </ion-col>
         <ion-col col-4 class="ion-no-padding">
           <div routerLink="/tabs/tabs/contact" class="icon-box">
-            <fa-icon [icon]="icons.faPaperPlane"></fa-icon>
-            <span class="title">Contact</span>
+            <fa-icon [icon]="icons.faHeadset"></fa-icon>
+            <span class="title">Support</span>
           </div>
         </ion-col>
       </ion-row>
@@ -87,7 +106,21 @@
           <ion-slides [options]="exploreOpt">
             <ion-slide>
               <ion-card>
-                <img width="100%" src="https://ionicframework.com/docs/demos/api/card/madison.jpg" alt="">
+                <div style="position: relative">
+                  <div class="rainbow" style="width: 70%; bottom: 3px;">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <img width="100%" src="assets/img/grid/one.jpg" alt="">
+                </div>
                 <ion-card-header>
                   <ion-card-title>Our Plans</ion-card-title>
                 </ion-card-header>
@@ -95,7 +128,21 @@
             </ion-slide>
             <ion-slide>
               <ion-card>
-                <img width="100%" src="https://ionicframework.com/docs/demos/api/card/madison.jpg" alt="">
+                <div style="position: relative">
+                  <div class="rainbow" style="width: 70%; bottom: 3px;">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <img width="100%" src="assets/img/grid/two.jpg" alt="">
+                </div>
                 <ion-card-header>
                   <ion-card-title>Our Plans</ion-card-title>
                 </ion-card-header>
@@ -103,7 +150,21 @@
             </ion-slide>
             <ion-slide>
               <ion-card>
-                <img width="100%" src="https://ionicframework.com/docs/demos/api/card/madison.jpg" alt="">
+                <div style="position: relative">
+                  <div class="rainbow" style="width: 70%; bottom: 3px;">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <img width="100%" src="assets/img/grid/three.jpg" alt="">
+                </div>
                 <ion-card-header>
                   <ion-card-title>Our Plans</ion-card-title>
                 </ion-card-header>
@@ -111,13 +172,32 @@
             </ion-slide>
             <ion-slide>
               <ion-card>
-                <img width="100%" src="https://ionicframework.com/docs/demos/api/card/madison.jpg" alt="">
+                <div style="position: relative">
+                  <div class="rainbow" style="width: 70%; bottom: 3px;">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <img width="100%" src="assets/img/grid/one.jpg" alt="">
+                </div>
                 <ion-card-header>
                   <ion-card-title>Our Plans</ion-card-title>
                 </ion-card-header>
               </ion-card>
             </ion-slide>
           </ion-slides>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <img class="ad" src="assets/img/ad.jpg" alt="">
         </ion-col>
       </ion-row>
     </ion-grid>

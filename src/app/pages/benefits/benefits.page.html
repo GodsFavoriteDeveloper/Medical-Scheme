@@ -1,30 +1,35 @@
 <ion-header>
-  <ion-toolbar color="dark">
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-back-button defaultHref="/tabs/tabs/home"></ion-back-button>
     </ion-buttons>
     <ion-title>Benefits</ion-title>
   </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-searchbar></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
-<div class="gems-border"></div>
+<div class="gems-border">
+  <div class="rainbow">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
 
 <ion-content>
-  <ion-card>
-    <ion-item lines="full" detail button>
-      <ion-icon slot="start" src="assets/img/tooth.svg"></ion-icon>
-      Dental Care
+  <ion-list>
+    <ion-item *ngFor="let benefit of benefits" lines="full" detail button>
+      <ion-icon slot="start" name="fitness"></ion-icon>
+      {{benefit?.Description | titlecase}}
     </ion-item>
-    <ion-item lines="none">
-      <ion-progress-bar color="success" value="0.9"></ion-progress-bar>
-    </ion-item>
-  </ion-card>
-  <ion-card>
-    <ion-item detail button>
-      <ion-icon slot="start" src="assets/img/tooth.svg"></ion-icon>
-      Dental Care
-    </ion-item>
-    <ion-item lines="none">
-      <ion-progress-bar color="success" value="0.7"></ion-progress-bar>
-    </ion-item>
-  </ion-card>
+  </ion-list>
+  
 </ion-content>

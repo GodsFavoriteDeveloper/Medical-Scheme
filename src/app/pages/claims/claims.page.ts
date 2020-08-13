@@ -12,7 +12,7 @@ import { LoadingController } from '@ionic/angular';
 export class ClaimsPage implements OnInit {
   claims;
   loader;
-  claimState = 'history';
+  claimState = 'benefits';
   benefits;
   statements;
 

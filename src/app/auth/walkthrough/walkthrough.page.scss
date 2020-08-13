@@ -20,7 +20,7 @@ ion-header {
     position: absolute;
 }
 .top {
-    flex: 3;
+    flex: 2;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -33,6 +33,7 @@ ion-header {
     background: #ffffff;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    padding: 0 10px;
 }
 .swiper-pagination-bullet {
     width: 11px !important;

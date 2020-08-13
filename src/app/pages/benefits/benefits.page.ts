@@ -1,5 +1,6 @@
 import { AuthenticationService } from './../../services/authentication.service';
 import { Component, OnInit } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-benefits',
@@ -8,10 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BenefitsPage implements OnInit {
   benefits;
+  loader;
 
-  constructor(private auth: AuthenticationService) { }
+  constructor(private api: AuthenticationService, private loadingCtrl: LoadingController) { }
 
   ngOnInit() {
+    this.loadBenefits();
+  }
+
+  loadBenefits() {
+    this.showLoader();
+    this.api.getBenefits().subscribe(benefits => {
+      this.benefits = JSON.parse(benefits.data);
+      console.log(this.benefits);
+      this.loader.dismiss();
+    }, error => {
+      console.log(error);
+      this.loader.dismiss();
+    });
+  }
+
+  async showLoader() {
+    this.loader = await this.loadingCtrl.create({
+      spinner: 'circles'
+    })
+    this.loader.present();
   }
 
 
