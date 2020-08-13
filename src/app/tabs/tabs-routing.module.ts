@@ -40,6 +40,10 @@ const routes: Routes = [
         loadChildren: () => import('../pages/benefits/benefits.module').then(m => m.BenefitsPageModule)
       },
       {
+        path: 'documents',
+        loadChildren: () => import('../pages/documents/documents.module').then(m => m.DocumentsPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tabs/home',
         pathMatch: 'full'

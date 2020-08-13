@@ -2,6 +2,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background: #eeeeee;
 }
 .top {
     flex: 2;
@@ -12,6 +13,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom-left-radius: 100px;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px;
 }
 .logo {
     padding: 10px;
@@ -35,6 +38,7 @@
 
 ion-item {
     margin-bottom: 5px;
+    border-radius: 10px;
 }
 ion-button {
     height: 50px;

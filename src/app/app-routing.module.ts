@@ -69,6 +69,14 @@ const routes: Routes = [
   {
     path: 'bot',
     loadChildren: () => import('./pages/bot/bot.module').then( m => m.BotPageModule)
+  },
+  {
+    path: 'documents',
+    loadChildren: () => import('./pages/documents/documents.module').then( m => m.DocumentsPageModule)
+  },
+  {
+    path: 'information',
+    loadChildren: () => import('./auth/information/information.module').then( m => m.InformationPageModule)
   }
 ];
 @NgModule({

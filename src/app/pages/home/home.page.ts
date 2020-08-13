@@ -9,7 +9,11 @@ import { faCamera, faBaby, faHandshake, faFileContract, faCoins, faEye, faHandHo
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-  member: Member;
+  member;
+  exploreOpt = {
+    slidesPerView: 2.1,
+    spaceBetween: 8
+  }
   icons = {
     faCamera,
     faBaby,

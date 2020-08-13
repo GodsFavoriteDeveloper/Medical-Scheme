@@ -93,6 +93,10 @@ ion-segment-button {
 }
 
 .benefit-slide {
+    .boxes {
+        margin-top: -35px;
+        margin-right: 5px;
+    }
     .swiper-container {
         margin-left: 5px;
     }
@@ -114,7 +118,7 @@ ion-segment-button {
         background: #fff;
         padding: 40px 5px;
         border-radius: 8px;
-        margin: 15px 0;
+        margin: 15px 0 8px;
         box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px;
         align-items: flex-start;
         flex-direction: column;
@@ -122,8 +126,9 @@ ion-segment-button {
 }
 
 .details {
-    background: #fff;
-    padding: 25px 5px;
+    background: var(--ion-color-primary);
+    padding: 42px 25px 65px;
+    border-bottom-left-radius: 100px;
     .detail {
         text-align: center;
         border-right: 1px solid #eeeeee;
@@ -133,4 +138,42 @@ ion-segment-button {
         margin-bottom: 4px !important;
         color: var(--ion-color-darkblue);
     }
-} 
+}
+h2.topt {
+    font-size: 55px !important;
+    color: #ffffff;
+}
+p.toptp {
+    font-size: 12px !important;
+    color: #c3c3c3;
+    padding: 0;
+    margin: 0 !important;
+    line-height: 4px;
+}
+.acticity-wrap {
+    margin: 0 7px;
+    border-radius: 7px;
+    overflow: hidden;
+    font-size: 17px;
+    font-weight: 500;
+    .activity-title {
+        color: #000;
+        font-weight: 600;
+    }
+    h2.activity-header {
+        font-size: 18px !important;
+        font-weight: 500;
+    }
+    ion-label {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+.heady {
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 8px;
+}
+span.activity-title {
+    font-weight: 600;
+}

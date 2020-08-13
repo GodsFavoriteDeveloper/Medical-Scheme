@@ -1,15 +1,13 @@
-<ion-header>
-  <ion-toolbar>
+<!-- <ion-header>
+  <ion-toolbar color="primary">
     <ion-buttons slot="end">
-      <ion-button routerLink="/onboard">
-        SKIP
-      </ion-button>
     </ion-buttons>
+    <ion-title>GEMS</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 <ion-content>
   <div class="wrapper">
-    <ion-slides [options]="slideOpts">
+    <ion-slides pager [options]="slideOpts">
       <ion-slide>
         <div class="top">
           <img src="assets/img/claims.svg" alt="">
@@ -17,7 +15,7 @@
         <div class="bottom">
           <h2>Access Your Claims</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolorum. Laboriosam, aliquid odit</p>
-          <ion-button color="primary" (click)="goToSlide()">Next</ion-button>
+          <ion-button color="primary" fill="outline" shape="round" routerLink="/onboard">Skip</ion-button>
         </div>
       </ion-slide>
       <ion-slide>
@@ -27,7 +25,7 @@
         <div class="bottom">
           <h2>Find Nearest Provider</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolorum. Laboriosam, aliquid odit</p>
-          <ion-button color="primary" (click)="goToSlide()">Next</ion-button>
+          <ion-button color="primary" fill="outline" shape="round" routerLink="/onboard">Skip</ion-button>
         </div>
       </ion-slide>
       <ion-slide>
@@ -37,7 +35,7 @@
         <div class="bottom">
           <h2>Change Your Plan</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolorum. Laboriosam, aliquid odit</p>
-          <ion-button color="primary" routerLink="/onboard">Continue</ion-button>
+          <ion-button color="primary" fill="outline" shape="round" routerLink="/onboard">Continue</ion-button>
         </div>
       </ion-slide>
     </ion-slides>

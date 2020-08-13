@@ -9,7 +9,7 @@ import { IonSlides } from '@ionic/angular';
 export class WalkthroughPage implements OnInit {
   @ViewChild('slides', {static: false}) slides: IonSlides;
   slideOpts = {
-    // pager: true
+    pager: true
   };
 
 

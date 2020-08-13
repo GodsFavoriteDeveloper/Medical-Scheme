@@ -1,19 +1,23 @@
 <ion-header>
   <ion-toolbar color="dark">
-    <ion-title>Card</ion-title>
+    <ion-title>My Plan</ion-title>
   </ion-toolbar>
 </ion-header>
 <div class="gems-border"></div>
 
 <ion-content>
   <div class="tp-wrapper">
-    <div class="tp-box" (click)="toggleFlip()" [@flipState]="flip">
-      <!-- <div class="tp-box__side tp-box__front">
+    <!-- <div class="tp-box" (click)="toggleFlip()" [@flipState]="flip">
+      <div class="tp-box__side tp-box__front">
         <img src="assets/img/credit_card.png" alt="">
-      </div> -->
+      </div>
       <div class="tp-box__side tp-box__back">
         <img src="assets/img/credit_card_back.png" alt="">
       </div>
+    </div> -->
+
+    <div class="membership">
+      <img src="assets/img/sapphire.jpg" alt="">
     </div>
 
 
@@ -37,7 +41,7 @@
           <ion-icon slot="start" name="call"></ion-icon>
           Contact Support
         </ion-item>
-        <ion-item detail button>
+        <ion-item lines="none" detail button>
           <ion-icon slot="start" name="settings"></ion-icon>
           Card Settings
         </ion-item>

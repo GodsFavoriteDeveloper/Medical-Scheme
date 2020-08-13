@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="dark">
+  <ion-toolbar color="primary">
     <div class="topitem">
       <ion-item lines="full">
         <ion-thumbnail slot="start">
@@ -11,11 +11,11 @@
           <p>{{profile?.Plan.BenefitPlanName}}</p>
           <!-- <p class="switch">Switch Account</p> -->
         </ion-label>
-        <ion-icon routerLink="/onboard" slot="end" color="warning" name="log-out-outline"></ion-icon>
+        <ion-icon (click)="logout()" slot="end" color="warning" name="log-out-outline"></ion-icon>
       </ion-item>
     </div>
   </ion-toolbar>
-  <ion-toolbar color="dark">
+  <!-- <ion-toolbar color="primary">
     <ion-segment [(ngModel)]="user" (ionChange)="segmentChanged($event)">
       <ion-segment-button value="member">
         <ion-label>Member</ion-label>
@@ -23,19 +23,20 @@
       <ion-segment-button value="activity">
         <ion-label>Activity</ion-label>
       </ion-segment-button>
-      <!-- <ion-segment-button value="benefit">
-        <ion-label>Benefit</ion-label>
-      </ion-segment-button> -->
     </ion-segment>
-  </ion-toolbar>
+  </ion-toolbar> -->
 </ion-header>
 
 <!-- <div class="gems-border"></div> -->
 
 <ion-content>
   <ion-grid class="ion-no-padding benefit-slide" *ngIf="user === 'member'">
-    <ion-row class="details">
+    <ion-row *ngIf="dayToDayBenefits" class="details">
       <ion-col>
+        <h2 class="topt" *ngIf="dayToDayBenefits">R{{dayToDayBenefits[0].MaxAmount.Amount}}</h2>
+        <p class="toptp">My Balance</p>
+      </ion-col>
+      <!-- <ion-col>
         <div class="detail">
           <h2 class="title">Date of Birth</h2>
           <p>{{profile?.DOB | date: 'mediumDate'}}</p>
@@ -52,14 +53,14 @@
           <h2 class="title">ID Number</h2>
           <p>{{profile?.MemberIDNo}}</p>
         </div>
-      </ion-col>
+      </ion-col> -->
     </ion-row>
 
     
-    <ion-row>
+    <ion-row class="boxes" *ngIf="dayToDayBenefits">
       <ion-col>
         <ion-slides [options]="slideOpt">
-          <ion-slide>
+          <ion-slide class="darkslide">
             <!-- <ion-icon name="home"></ion-icon> -->
             <p>ALLOCATED</p>
             <h2 *ngIf="dayToDayBenefits">R{{dayToDayBenefits[0].MaxAmount.Amount}}</h2>
@@ -69,7 +70,7 @@
             <p>USED</p>
             <h2 *ngIf="dayToDayBenefits">R{{dayToDayBenefits[0].FreeAmount.Amount}}</h2>
           </ion-slide>
-          <ion-slide class="darkslide">
+          <ion-slide>
             <!-- <ion-icon name="home"></ion-icon> -->
             <p>USED</p>
             <h2 *ngIf="dayToDayBenefits">R{{dayToDayBenefits[0].UsedAmount.Amount}}</h2>
@@ -82,9 +83,34 @@
         </ion-slides>
       </ion-col>
     </ion-row>
-    <ion-row>
+
+
+    <ion-row *ngIf="activity" class="heady">
+      <ion-col class="ion-no-padding activity-title" col-6>
+        <span class="activity-title">Activity</span>
+      </ion-col>
+      <ion-col class="ion-no-padding ion-text-end" col-6>
+        View All
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row *ngIf="activity">
       <ion-col class="ion-no-padding">
-        <div class="dep-wrapper">
+        <div class="acticity-wrap">
+          <ion-item *ngFor="let item of activity" lines="inset" detail button>
+            <ion-label>
+              <h2 class="activity-header">{{item.Header}}</h2>
+              <p  class="activity-date">{{item.DOA | date: 'mediumDate'}}</p>
+            </ion-label>
+          </ion-item>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <!-- <ion-row *ngIf="profile?.Dependants">
+      <ion-col *ngIf="profile?.Dependants.length > 0" class="ion-no-padding">
+        <div class="dep-wrapper" >
           <span class="dep-title">Dependants</span>
           <div class="dependants">
             <div class="dependant" *ngFor="let dependant of profile?.Dependants">
@@ -94,7 +120,7 @@
         </div>
 
       </ion-col>
-    </ion-row>
+    </ion-row> -->
   </ion-grid>
 
   <ion-grid class="ion-no-padding activity" *ngIf="user === 'activity'">
@@ -139,7 +165,7 @@
           </ion-slide>
           <ion-slide>
             <div class="graph">
-              <!-- <ion-icon name="home"></ion-icon> -->
+
               <p>Remaining</p>
               <h2>R2,875</h2>
             </div>

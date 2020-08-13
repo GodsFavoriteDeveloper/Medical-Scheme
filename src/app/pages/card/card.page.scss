@@ -6,11 +6,21 @@ ion-content {
     background: #eee;
 }
 .settings-list {
-    margin: 15px;
-    border-radius: 5px;
+    margin: 10px;
+    border-radius: 10px;
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 13px;
 }
-
+.membership {
+    padding: 10px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 13px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.membership img {
+    border-radius: 10px;
+}
 
 
 
