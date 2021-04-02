@@ -77,6 +77,7 @@ export class AuthenticationService {
   }
 
   getMemberFullProfile() {
+    if (!this.selectedMember) { return }
     let req = this.httpNative.get(`${this.url}/api/v1/Members/${this.selectedMember.MemberGuid}`,
     {},
     {
@@ -86,6 +87,7 @@ export class AuthenticationService {
   }
 
   getMemberActivity(id, pageNumber = 1) {
+    if (!this.selectedMember) { return }
     let req = this.httpNative.get(
       `${this.url}/api/v1/Members/${this.selectedMember.MemberGuid}/activities?pageCount=5&pageNumber=${pageNumber}`,
       {},
@@ -97,6 +99,7 @@ export class AuthenticationService {
   }
 
   getDayToDayBenefits() {
+    if (!this.selectedMember) { return }
     let req = this.httpNative.get(`${this.url}/api/v1/Members/${this.selectedMember.MemberGuid}/daytodayBenefit/`,
     {},
     {
@@ -107,6 +110,7 @@ export class AuthenticationService {
   }
 
   getAllDocuments() {
+    if (!this.selectedMember) { return }
     let req = this.httpNative.get(`${this.url}/api/v1/BenefitDocuments/GetAllDocuments/${this.selectedMember.MemberGuid}`,
     {},
     {
@@ -121,6 +125,7 @@ export class AuthenticationService {
   }
 
   getClaims() {
+    if (!this.selectedMember) { return }
     let req = this.httpNative.get(`${this.url}/api/v1/Members/${this.selectedMember.MemberGuid}/claimStatements/`,
     {},
     {
@@ -134,6 +139,7 @@ export class AuthenticationService {
 
 
   getBenefits() {
+    if (!this.selectedMember) { return }
     let req = this.httpNative.get(`${this.url}/api/v1/Members/${this.selectedMember.MemberGuid}/benefitUsage/`,
     {},
     {

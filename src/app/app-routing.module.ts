@@ -24,7 +24,7 @@ const routes: Routes = [
   },
   {
     path: 'claims',
-    loadChildren: () => import('./pages/claims/claims.module').then( m => m.ClaimsPageModule)
+    loadChildren: () => import('./pages/card/card.module').then( m => m.CardPageModule)
   },
   {
     path: 'benefits',
