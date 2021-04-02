@@ -77,6 +77,10 @@ const routes: Routes = [
   {
     path: 'information',
     loadChildren: () => import('./auth/information/information.module').then( m => m.InformationPageModule)
+  },
+  {
+    path: 'welcome',
+    loadChildren: () => import('./auth/welcome/welcome.module').then( m => m.WelcomePageModule)
   }
 ];
 @NgModule({

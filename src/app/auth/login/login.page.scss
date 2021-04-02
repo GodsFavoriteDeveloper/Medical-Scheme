@@ -3,19 +3,22 @@
     display: flex;
     flex-direction: column;
     background: #eeeeee;
-}
-.top {
-    flex: 2;
     background: url('../../../assets/img/gemsbg.jpg');
     background-position: center;
     background-size: cover;
+}
+.top {
+    flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom-left-radius: 100px;
     box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px;
     position: relative;
+}
+.rainbow {
+    position: absolute;
+    top: 0;
 }
 .logo {
     padding: 10px;
@@ -35,6 +38,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 ion-item {

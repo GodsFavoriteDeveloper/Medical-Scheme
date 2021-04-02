@@ -1,19 +1,19 @@
 <ion-header>
-  <!-- <ion-toolbar color="dark">
+  <ion-toolbar color="light">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title></ion-title>
+    <ion-title>Hello {{member?.UserName}}</ion-title>
     <ion-avatar *ngIf="member" slot="end">
       <img src="https://api.gems.gov.za/api/v1/MemberImage/{{member?.MemberGuid}}?counter=0" alt="">
     </ion-avatar>
-  </ion-toolbar> -->
-  <ion-toolbar color="primary">
+  </ion-toolbar>
+  <!-- <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-searchbar placeholder="Hey {{member?.UserName}}, any questions?"></ion-searchbar>
-  </ion-toolbar>
+  </ion-toolbar> -->
 </ion-header>
 <div class="gems-border">
   <div class="rainbow">
@@ -35,7 +35,8 @@
     <ion-grid class="ion-no-padding">
       <ion-row>
         <ion-col col-6 class="ion-no-padding name-section">
-          <h1 class="heading">Hello, <br>{{member?.UserName}}</h1>
+          <p>YOUR BALANCE</p>
+          <h1 class="heading">R90.00</h1>
         </ion-col>
         <ion-col col-6 class="ion-no-padding ion-text-end">
           <div class="logo"></div>
@@ -50,20 +51,20 @@
       <ion-row>
         <ion-col col-4 class="ion-no-padding">
           <div routerLink="/tabs/tabs/claims" class="icon-box right-5 bottom-5 ion-activatable ripple-parent">
-            <fa-icon [icon]="icons.faHandHoldingUsd"></fa-icon>
+            <img class="svg-icon" src="assets/img/home/claims-outline-white.svg" alt="">
             <span class="title">Claims</span>
             <ion-ripple-effect></ion-ripple-effect>
           </div>
         </ion-col>
         <ion-col col-4 class="ion-no-padding">
           <div routerLink="/tabs/tabs/benefits" class="icon-box right-5 bottom-5">
-            <fa-icon class="coins" [icon]="icons.faCoins"></fa-icon>
+            <img class="svg-icon" src="assets/img/home/claims-outline.svg" alt="">
             <span class="title">Benefits</span>
           </div>
         </ion-col>
         <ion-col col-4 class="ion-no-padding">
           <div class="icon-box bottom-5">
-            <fa-icon class="coins" [icon]="icons.faEye"></fa-icon>
+            <img class="svg-icon" src="assets/img/home/claims-outline.svg" alt="">
             <span class="title">360&deg; View</span>
           </div>
         </ion-col>
@@ -72,19 +73,19 @@
       <ion-row>
         <ion-col col-4 class="ion-no-padding">
           <div routerLink="/tabs/tabs/card" class="icon-box right-5">
-            <fa-icon [icon]="icons.faUserTie"></fa-icon>
+            <img class="svg-icon" src="assets/img/home/claims-outline.svg" alt="">
             <span class="title">My Plan</span>
           </div>
         </ion-col>
         <ion-col col-4 class="ion-no-padding">
           <div routerLink="/tabs/tabs/documents" class="icon-box right-5">
-            <fa-icon [icon]="icons.faHandshake"></fa-icon>
+            <img class="svg-icon" src="assets/img/home/claims-outline.svg" alt="">
             <span class="title">Downloads</span>
           </div>
         </ion-col>
         <ion-col col-4 class="ion-no-padding">
           <div routerLink="/tabs/tabs/contact" class="icon-box">
-            <fa-icon [icon]="icons.faHeadset"></fa-icon>
+            <img class="svg-icon" src="assets/img/home/claims-outline.svg" alt="">
             <span class="title">Support</span>
           </div>
         </ion-col>
